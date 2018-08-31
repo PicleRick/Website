@@ -1,0 +1,61 @@
+<div class="page-wrap">
+    <!-- Nav -->
+    <nav id="nav">
+        <ul>
+            <li><a href="<%= root_path %>" class="active"><i class="fas fa-home"></i></a></li>
+            <li><a href="/gallery"><i class="far fa-image"></i></a></li>
+            <li><a href="/profile"><i class="fas fa-user"></i></a></li>
+            <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li><br /><br /><br />
+            <li>
+                <% if user_signed_in? %>
+                <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+                <% else %>
+                <%= link_to 'Sign in', new_user_session_path %>
+                <% end %>
+            </li>
+        </ul>
+    </nav>
+    <!-- Main -->
+    <section id="main">
+        <!-- Section -->
+        <section>
+            <div class="inner">
+                <header>
+                    <h1>Profil</h1>
+                </header>
+                <p>Adresse email
+                    <br>
+                    <br>
+                    <%= link_to "Éditer votre profil", edit_user_registration_path %>
+                </p>
+                <br>
+                <h2>Historique de vos commandes</h2>
+                <p>Commande effectuée le
+                    <br>Nombre photos
+                    <br>Montant total </p>
+            </div>
+        </section>
+        <!-- Contact -->
+        <section id="contact" style="background-color: #E6E6E6;">
+            <!-- Social -->
+            <div class="social column">
+                <h3>Envie de chat ?</h3>
+                <p>Miaou</p>
+                <h3>Suivez-nous</h3>
+                <ul class="icons">
+                    <li><a href="https://twitter.com/the_hacking_pro/"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.facebook.com/thehackingproject/"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/the_hacking_project/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/school/the_hacking_project/"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="copyright">
+                &copy; The Hacking Project. Images: <a href="https://unsplash.com/">Unsplash</a>
+            </div>
+        </footer>
+    </section>
+</div>
+</body>

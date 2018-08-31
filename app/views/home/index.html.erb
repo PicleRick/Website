@@ -1,0 +1,120 @@
+<body>
+    <div class="page-wrap">
+        <!-- Nav -->
+        <nav id="nav">
+            <ul>
+                <li><a href="<%= root_path %>" class="active"><i class="fas fa-home"></i></a></li>
+                <li><a href="/gallery"><i class="far fa-image"></i></a></li>
+                <li><a href="/profile"><i class="fas fa-user"></i></a></li>
+                <li><a href="/cart"><i class="fas fa-shopping-cart"></i></a></li><br /><br /><br />
+                <li>
+                    <% if user_signed_in? %>
+                    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+                    <% else %>
+                    <%= link_to 'Sign in', new_user_session_path %>
+                    <% end %>
+                </li>
+            </ul>
+        </nav>
+        <!-- Main -->
+        <section id="main">
+            <!-- Banner -->
+            <section id="banner">
+                <div class="inner">
+                    <h1>Chats</h1>
+                    <p>Comme si vous les entendiez ronronner</p>
+                </div>
+            </section>
+            <!-- Gallery -->
+            <section id="galleries">
+                <!-- Photo Galleries -->
+                <div class="gallery">
+                    <header class="special">
+                        <h2>Ce qu'il y a de nouveau</h2>
+                    </header>
+                    <div class="content">
+                        <div class="media">
+                            <a>
+                                <%= image_tag 'img7.jpg' %>
+                            </a>
+                        </div>
+                        <div class="media">
+                            <a>
+                                <%= image_tag 'img5.jpg' %>
+                            </a>
+                        </div>
+                        <div class="media">
+                            <a>
+                                <%= image_tag 'img3.jpg' %>
+                            </a>
+                        </div>
+                        <div class="media">
+                            <a>
+                                <%= image_tag 'img8.jpg' %>
+                            </a>
+                        </div>
+                    </div>
+                    <footer>
+                        <a href="/gallery" class="button big">En voir plus ?</a>
+                    </footer>
+                </div>
+            </section>
+            <!-- Contact -->
+            <section id="contact">
+                <!-- Social -->
+                <div class="social column">
+                    <h3>Miaou</h3>
+                    <p>Il siège au coin du feu, les paupières mi-closes,
+                        <br/> Aspirant la chaleur du brasier qui s’éteint ;
+                        <br/> La bouilloire bouillonne avec des bruits d’étain ;
+                        <br/> Le bois flambe, noircit, s’effile en charbons roses.
+                        <br/> Le royal exilé prend de sublimes poses ;
+                        <br/> Il allonge son nez sur ses pieds de satin ;
+                        <br/> Il s’endort, il échappe au stupide destin,
+                        <br/> A l’irrémédiable écroulement des choses.
+                        <br/> Les siècles en son cœur ont épaissi leur nuit,
+                        <br/> Mais au fond de son cœur, inextinguible, luit
+                        <br/> Comme un flambeau sacré, son rêve héréditaire.
+                        <br/> Un soir d’or, le déclin empourpré du soleil,
+                        <br/> Des fûts noirs de palmiers sur l’horizon vermeil,
+                        <br/> Un grand fleuve qui roule entre deux murs de terre.</p>
+                    <h3>Suivez-nous</h3>
+                    <ul class="icons">
+                        <li><a href="https://twitter.com/the_hacking_pro/"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/thehackingproject/"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/the_hacking_project/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.linkedin.com/school/the_hacking_project/"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+                <!-- Form -->
+                <div class="column">
+                    <h3>Contactez-nous</h3>
+                    <form action="#" method="post">
+                        <div class="field half first">
+                            <label for="name">Nom</label>
+                            <input name="name" id="name" type="text" placeholder="Nom">
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+                            <input name="email" id="email" type="email" placeholder="Email">
+                        </div>
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" rows="6" placeholder="Message"></textarea>
+                        </div>
+                        <ul class="actions">
+                            <li>
+                                <input value="Envoyez" class="button" type="submit">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+            <!-- Footer -->
+            <footer id="footer">
+                <div class="copyright">
+                    &copy; The Hacking Project. Images: <a href="https://unsplash.com/">Unsplash</a>
+                </div>
+            </footer>
+        </section>
+    </div>
