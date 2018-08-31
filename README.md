@@ -1,22 +1,18 @@
 # README
+Lien heroku : https://ecoumerce.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Etapes pour deployer en local :
 
-Things you may want to cover:
+1- git clone lien du repos
 
-* Ruby version
+2- bundle install --without production
 
-* System dependencies
+3- rails db:create
 
-* Configuration
+4- rails db:migrate 
 
-* Database creation
+5- rails db:seed
 
-* Database initialization
+6- rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+Tu peux maintenant aller sur  http://localhost:3000/
